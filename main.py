@@ -11,13 +11,15 @@ if x>0:
     print("Строки введены верно")
 else:
     print("строки введены неверно")
+# Сбор строк 
+lines = []
 #создание строк
-text = [[str(input("Введи строку:"))]for i in range(x)] 
-print(text)
-sum_words = 0
-for i in text:
-    for k in i:
-        words = k.split()
-        sum_words += len(words)
-print("Количество слов =", sum_words)
+for i in range(x):
+    line = input("Введите строку: ")
+    lines.append(line)
+print(lines)
+text = " ".join(lines)
+words = text.split()
+words_count = len(words)
+print("Количество слов =",words_count)
 
